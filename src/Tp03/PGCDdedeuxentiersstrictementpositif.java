@@ -25,13 +25,13 @@ public class PGCDdedeuxentiersstrictementpositif {
         b = reader.nextInt();
         PGCD(a,b);
     }
-    public static int PGCD (int x ,y ){
+    public static int PGCD (int x ,int y ){
        int PG , PB ;
       
              
         while (x > 0 && y > 0){
           if  ( x < y ) {
-              y-x=y ; 
+              y - x = y ; 
           }
           else {
               x-y=x;
