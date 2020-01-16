@@ -17,31 +17,27 @@ public class PGCDdedeuxentiersstrictementpositif {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int a , b ;
+        int x , y ;
         Scanner reader = new Scanner(System.in);
         System.out.print("Ecrire une valeur");
-        a = reader.nextInt();
+        x = reader.nextInt();
         System.out.print("Ecrivez une deuxiemme valeur : ");
-        b = reader.nextInt();
-        PGCD(a,b);
+        y = reader.nextInt();
+        System.out.print("PGCD :" + PGCD(x,y));
     }
-    public static int PGCD (int x ,int y ){
-       int PG , PB ;
+    public static int PGCD (int a ,int b ){
+      
       
              
-        while (x > 0 && y > 0){
-          if  ( x < y ) {
-              y - x = y ; 
+        while (a != b){
+          if  ( a < b ) {
+              a = a - b  ; 
           }
           else {
-              x-y=x;
+              b = b - a;
           }
-        }
-        if ( x == 0){
-            System.out.print(+y);
-        }
-        else {
-            System.out.print(+x);
-        }
+      
     }
+        return a ;
+}
 }
