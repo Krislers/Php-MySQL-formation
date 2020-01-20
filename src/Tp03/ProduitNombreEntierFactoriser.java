@@ -24,7 +24,9 @@ public class ProduitNombreEntierFactoriser {
     int n ; 
     System.out.print("Donner le factorielle ");
     n=reader.nextInt();
-    System.out.print("La valeur du factorielle est donc : "+Factorielle(n));
+    affiche();
+    System.out.println("La valeur du factorielle est donc : "+Factorielle(n));
+    affiche();
     
     
        // TODO code application logic here
@@ -37,5 +39,8 @@ public class ProduitNombreEntierFactoriser {
              produit = produit * i ;
          }
          return produit ;
+     }
+     public static void affiche(){
+         System.out.println("**********************************************");
      }
 }
