@@ -15,9 +15,9 @@ public class Comparaison_deux_nombre_entier {
     public static void main(String[] args) {
     double n1 , n2 ; 
     Scanner reader = new Scanner(System.in);
-    System.out.print("ecrire le Premier nombres FDP : ");
+    System.out.print("ecrire le Premier nombres : ");
     n1 = reader.nextDouble();
-    System.out.print("ecrire le deuxieme nombres La con de tes Morts: ");
+    System.out.print("ecrire le deuxieme nombres : ");
     n2 = reader.nextDouble() ; 
     
     if (n1<n2){
