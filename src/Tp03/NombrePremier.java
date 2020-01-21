@@ -21,15 +21,28 @@ public class NombrePremier {
         Scanner reader = new Scanner(System.in);
         System.out.print("Ecrire un nombre ");
         a = reader.nextInt();
-        if( Nombrepremier(a)== true ){
-            System.out.print("C'est un nombre premier " );
-        }
-            else {
-                    System.out.println("Se nombre n'est pas premier");
-                    }
-        }
+        String msg ;
         
-        // TODO code application logic here
+     //   if( Nombrepremier(a)== true ){
+     //       System.out.print("C'est un nombre premier " );
+      //  }
+        //    else {
+        //            System.out.println("Se nombre n'est pas premier");
+      //              }
+       //Oprérateur ternaire 
+    msg = (Nombrepremier(a))? "Est premier " : "N'estpas premier";
+    System.out.println(msg) ;
+    
+    System.out.println("Liste des nombres premier de l'intervlle [3,n]");
+    System.out.println("Choix de la valeur de n ");
+    int n2  = reader.nextInt();
+          Nombrepremierafiicher(n2)  ;
+    System.out.println("Ecrire un nombre : ");
+     int n3 = reader.nextInt();
+            AfficheNPJ(n3);
+            }
+        
+        
     
     public static Boolean Nombrepremier (int x)
      { int div ;
@@ -38,11 +51,34 @@ public class NombrePremier {
      return false ; 
      }
      div=3;
-     while ( div * div <= x && x%div>x){
+     while ( div * div <= x && x%div>0){
          div = div + 2 ; 
     }
      
     return div*div > x ; 
     
 }
+    public static void Nombrepremierafiicher(int n ){
+         System.out.println("Liste des nombres premier de l'intervlle [3,n]");
+        for (int i=3 ; i <= n ; i++){
+            if (Nombrepremier(i)){
+                System.out.print(i + " ");          
+            }
+            
+            
+        }
+        System.out.print("\n Fin de liste");
+    }
+    public static void AfficheNPJ (int n){
+        for (int i=3 ; i <= n ; i++ ){
+            int ad , d = 2 ;
+          if(Nombrepremier(i)){
+              ad = d ;
+              d = i ;
+              if ( d == ad + 2);
+              System.out.printf("Premier jumeaux : %d %d\n", ad, d);                     
+            
+            }
+        }
+    }
 }
