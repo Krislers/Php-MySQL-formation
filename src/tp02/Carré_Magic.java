@@ -48,7 +48,7 @@ colone=(colone+1)%n;
     
         System.out.println();
         for(int j = 0;j < n ; j++)
-        System.out.print(tab[i][j] +"\t");
+        System.out.print(tab[j] +"\t");
     }
     }
 }

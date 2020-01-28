@@ -10,19 +10,51 @@ import java.util.Calendar;
 /**
  *
  * @author formation_gep
+ * 
  */
+
+
 public class Personne {
 
     private String nom ; 
     private int annéeNaissance ; 
     private int salaire ;
     
+    public void setAnéeNaissance(int annéeNaissance){
+    this.annéeNaissance = annéeNaissance ; 
+    }
+    
+    public int getAnnéeNaissance(){
+    return annéeNaissance ; 
+    }
+    
+    public int getSalaire(){
+    return salaire; 
+    }
+    
+    public void setSalaire(int salaire){
+    this.salaire =  salaire ;
+     }
+    
+    public String getNom(){
+    return nom;
+    }
+    
+    public void setNom(String nom){
+    this.nom=nom;
+    }
+    
     public Personne(){}
+    
     
     public Personne (String n , int a , int s ){
      nom = n ;  // Attribue = variable si l'attribut et la variiableon le méme nom on utilisara this.Attribut pour pourvoir lever les choses embigue 
      annéeNaissance = a  ; 
      salaire = s;
+    
+    }
+    public void affiche(){
+    System.out.printf("%s âge de %d ans \n",nom,calculAge());
     }
    
     public int calculAge(){ // Fonction qui retourne un entier et qui calcule l'age de la personne 
@@ -50,3 +82,4 @@ public class Personne {
     }
     
 }
+
